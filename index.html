@@ -21,7 +21,8 @@
 
 
 <body>
-<video style="height: 100%"
+<video id="vid"
+       style="height: 100%"
        autoplay
        controls
 >
@@ -32,6 +33,9 @@
 
 
 <script>
+    document.getElementById('vid').play();
+
+
     (function () {
         const apngTest = new Image(), ctx = document.createElement('canvas').getContext('2d');
 
