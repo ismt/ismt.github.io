@@ -16,7 +16,7 @@
 
     <title>Страница</title>
 
-    <link href="favicon.ico"
+    <link href="/favicon.ico"
           rel="icon"
           type="image/x-icon"
     >
@@ -28,6 +28,8 @@
 <video id="vid"
        style="height: 100%"
        controls
+       autoplay
+       muted
 >
     <source src="/output_h264.mp4"
             type="video/mp4"
@@ -36,25 +38,9 @@
 
 
 <script>
-    document.getElementById('vid').play();
+    // document.getElementById('vid').play();
 
 
-    (function () {
-        const apngTest = new Image(), ctx = document.createElement('canvas').getContext('2d');
-
-        apngTest.onload = function () {
-            ctx.drawImage(apngTest, 0, 0);
-            window.APNG_SUPPORTED = (ctx.getImageData(0, 0, 1, 1).data[3] === 0);
-        };
-
-        apngTest.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACGFjVEwAAAABAAAAAcMq2TYAAAANSURBVAiZY2BgYPgPAAEEAQB9ssjfAAAAGmZjVEwAAAAAAAAAAQAAAAEAAAAAAAAAAAD6A+gBAbNU+2sAAAARZmRBVAAAAAEImWNgYGBgAAAABQAB6MzFdgAAAABJRU5ErkJggg==';
-        // frame 1 (skipped on apng-supporting browsers): [0, 0, 0, 255]
-        // frame 2: [0, 0, 0, 0]
-    }());
-
-    setTimeout(function () {
-        // alert(window.APNG_SUPPORTED)
-    }, 3000)
 </script>
 </body>
 
