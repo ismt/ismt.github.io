@@ -26,26 +26,18 @@
 
 <body>
 <video id="video"
+       preload="metadata"
        style="max-height: 80%; max-width: 80%; object-fit: contain"
        controls
 >
-    <source src="/output_h264.mp4"
+    <source src="/output_h264.mp4#t=0.5"
             type="video/mp4"
     >
 </video>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-    $(document).ready(function () {
-        $("video").on("mouseover", function () {
-            this.play();
-            $(this).css("background-color", "black");
-        });
-        $("video").on("mouseleave", function () {
-            this.pause();
-        })
-    })
+
 </script>
 
 
